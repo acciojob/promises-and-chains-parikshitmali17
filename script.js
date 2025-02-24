@@ -1,18 +1,24 @@
 //your JS code here. If required.
-let age=document.getElementById("age");
+document.getElementById("voteForm").addEventLisrner("submit",(e)=>{
+	e.preventDefault()
+	let age=document.getElementById("age");
 let name=document.getElementById("name");
 if(age.value==null || name.value==null){
 	alert("Please Enter valid details")
 }
+	return
+})
 
 const function promise= new promise((resolve,reject)=>{
-	if(age.innerText>=18){
-		setTimeout(()=>{
-			resolve(alert(`Welcome,${name.innerText} . You can vote.`))
-		,4000)
+setTimeout(()=>{
+		if(age.value>=18){
+		
+			resolve(alert(`Welcome,${name.value} . You can vote.`))
+		
 	}else{
-		reject(alert(`Oh sorry${name.innerText}. You aren't old enough.`))
+		reject(alert(`Oh sorry${name.value}. You aren't old enough.`))
 	}
+},4000)
 })
 
 
