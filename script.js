@@ -3,10 +3,11 @@ document.getElementById("voteForm").addEventListener("submit",(e)=>{
 	e.preventDefault()
 	let age=document.getElementById("age");
 let name=document.getElementById("name");
-if(age.value==null || name.value==null){
+if(!age.value || !name.value){
 	alert("Please Enter valid details")
 }
- const promise= new promise((resolve,reject)=>{
+	  age = parseInt(age);
+ const promise= new Promise((resolve,reject)=>{
 setTimeout(()=>{
 		if(age.value>=18){
 		
