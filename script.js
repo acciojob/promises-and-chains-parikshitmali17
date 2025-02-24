@@ -1,5 +1,5 @@
 //your JS code here. If required.
-document.getElementById("voteForm").addEventLisrner("submit",(e)=>{
+document.getElementById("voteForm").addEventListener("submit",(e)=>{
 	e.preventDefault()
 	let age=document.getElementById("age");
 let name=document.getElementById("name");
