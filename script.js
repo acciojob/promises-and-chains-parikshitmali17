@@ -18,7 +18,7 @@ setTimeout(()=>{
 },4000)
 })
 
-promise.this((message)=>{
+promise.then((message)=>{
 	alert(message)
 }).catch((message)=>{
 	alert(message)
